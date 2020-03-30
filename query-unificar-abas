@@ -1,0 +1,1 @@
+=QUERY({gads!A2:F;facebook!A2:F};"select * where Col1 is not null")

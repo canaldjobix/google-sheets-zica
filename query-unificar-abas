@@ -1,1 +1,4 @@
+Base exemplo: https://docs.google.com/spreadsheets/d/1aGu03SE8cVCBF3jp1f11oJIxnUwX73f3cpTGpUCCxSE/
+
+Juntar o intervalo de colunas A2 a F das abas "gads" e "facebook": 
 =QUERY({gads!A2:F;facebook!A2:F};"select * where Col1 is not null")

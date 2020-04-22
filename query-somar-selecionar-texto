@@ -1,0 +1,29 @@
+Exemplos de situações:
+Somar todos valores de uma coluna;
+Somar valores baseado no nome de um anúncio;
+Somar valores baseado no nome de um veículo;
+Selecionar data, veículo, campanha e anúncio quando o investimento diário foi maior que determinado valor; 
+
+Somar valores de uma coluna:
+  =QUERY(B:G;"select sum(G)")
+
+Somar valores da coluna G onde contém o texto "hdr" na coluna D:
+=QUERY(B:G;"select sum(G) where D contains 'hdr'")
+
+Somar valores da coluna G onde contém o texto "hdr-01" na coluna D:
+=QUERY(B:G;"select sum(G) where D contains 'hdr-01'")
+
+Somar valores da coluna G onde contém o texto "fb" na coluna B:
+=QUERY(B:G;"select sum(G) where B contains 'fb'")
+
+Somar valores da coluna G onde contém o texto "gads" na coluna B:
+=QUERY(B:G;"select sum(G) where B contains 'gads'")
+
+Selecionar as colunas A,B,C e D, onde a coluna G contém o valor "11" ou "12" ordenado pela coluna A:
+=QUERY(A:G;"select A,B,C,G where G contains '11' or G contains '12' order by A")
+
+Selecionar as colunas A,B,C e D, onde a coluna D contém o texto "hdr-01" ou "hdr-02" ordenado pela coluna A:
+=QUERY(A:G;"select A,B,C,D where D contains 'hdr-01' or D contains 'hdr-02' order by A")
+
+Selecionar as colunas A,B,C e D, onde a coluna G contém valor maior que 10 ordenado pela coluna A:
+=QUERY(A:G; "select A,B,C,G where G>10 order by G")
